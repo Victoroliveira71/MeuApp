@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 140px auto 140px;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    grid-column: 1/4;
+    padding: 10px;
+    border-bottom: 1px solid rgba(169, 169, 169, 0.503);
+}
+
+header>div{
+    align-content: center;
+}
+
+header> p{
+    font-weight: bolder;
+    align-items: center;
+}
+
+header>div>a{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    align-content: center;
+    transition: background-color 0.5s, color 0.5s, border-radius 0.5s;
+}
+
+header>div>a:hover{
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(90, 200, 90);
+    color: white;
+}
+
+header>button{
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    width: 60px;
+    align-items: center;
+    background-color: rgb(32, 183, 32);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+header>button:hover{
+    background-color: green;
+}
+
+section.apresentacao{
+  margin: 70px;
+  grid-column: 2/4;
+}
+
+section.apresentacao>h2{
+    padding-bottom: 5px;
+}
+
+section.apresentacao>p{
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.753);
+}
+
+section.apresentacao>button{
+    border: none;
+    background-color:rgb(32, 183, 32) ;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+section.complemento1{
+    background-color: whitesmoke;
+    padding: 70px;
+    grid-column: 1/4;
+}
+
+.complemento1>article{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+section.complemento1>h2{
+   text-align: center;
+   padding-bottom: 20px;
+}
+
+article.itens>div{
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    width: 320px;
+    align-items: center;
+}
+
+section.complemento2{
+    margin: 70px;
+    grid-column: 2/3;
+}
+
+section.complemento2>h2{
+    text-align: center;
+    padding: 20px;
+}
+
+section.complemento2>.itens{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+section.complemento2>.itens>div{
+    background-color: whitesmoke;
+    width: 540px;
+}
+
+section.login{
+    grid-column: 1/4;
+    text-align: center;
+    padding: 40px;
+    background-color: rgb(32, 183, 32);
+    color: white;
+}
+
+section.login>h2{
+    font-size: 1em;
+    padding-bottom: 25px;
+}
+
+section.login>a{
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.5s;
+}
+
+section.login>a:hover{
+   background-color: rgb(2, 158, 2);
+   padding: 5px;
+   border-radius: 5px;
+
+}
+
+footer{
+    grid-column: 1/4;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    background-color: rgb(72, 72, 72);
+    color: white;
+}
+
+footer>div>button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+footer>div>button:hover{
+    color: rgb(183, 182, 182);
+}
