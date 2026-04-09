@@ -47,7 +47,8 @@ header>div>a:hover{
     color: white;
 }
 
-header>button{
+header>a{
+    text-decoration: none;
     border: none;
     border-radius: 5px;
     padding: 5px;
@@ -59,7 +60,7 @@ header>button{
     transition: background-color 0.5s;
 }
 
-header>button:hover{
+header>a:hover{
     background-color: green;
 }
 
