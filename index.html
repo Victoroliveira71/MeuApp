@@ -3,6 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        
+        :root {
+        --primary: #4CAF50;
+        --primary-dark: #43a047;
+        --dark: #333;
+        --light: #f5f5f5;
+        }
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container{
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .btn{
+            text-decoration: none;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        header{
+            border-bottom: 1px solid black;
+            padding: 10px 60px;
+        }
+
+        .container-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo{
+            font-size: 1.2em;
+        }
+        
+        .container-header>nav>a{
+            text-decoration: none;
+            padding: 5px;
+            color: black;
+        }
+
+        .container-header>nav>a:hover{
+            border-radius: 5px;
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 10px;
+        }
+
+        .hero{
+            padding: 60px 0;
+        }
+
+        .hero>.container>p{
+            padding-bottom: 10px;
+        }
+
+        .features{
+            padding: 50px 0;
+            text-align: center;
+            background-color: var(--light);
+        }
+
+        .features h2{
+            margin-bottom: 10px;
+        }
+
+        .features>.container{
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            border-radius: 5px;
+        }
+
+        .features-grid{
+            border-radius: 10px;
+            padding: 10px 20px;
+            background-color: white;
+        }
+
+        .testimonials{
+            padding: 50px 0;
+        }
+
+        .testimonials h2{
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .testimonials-grid{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        blockquote{
+            border-radius: 10px;
+            padding: 10px;
+            background-color: var(--light);
+        }
+
+        .cta{
+            padding: 40px 0;
+            text-align: center;
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .container-footer{
+            display: flex;
+            justify-content: space-around;
+            padding: 5px;
+            background-color: var(--dark);
+            color: white;
+        }
+
+        .container-footer>nav>a{
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 762px) {
+            .container-header{
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .features>.container{
+                flex-direction: column;
+            }
+
+            .testimonials-grid{
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        
+    </style>
+
     <title>MeuApp</title>
 </head>
 <body>
@@ -10,7 +160,7 @@
 
         <div class="container-header">
             <h1 class="logo">MeuApp</h1>
-            <nav>
+            <nav class="nav">
                 <a href="">Inicio</a>
                 <a href="">Recursos</a>
                 <a href="">Contato</a>
@@ -21,46 +171,70 @@
     </header>
 
     <section class="hero">
+
         <div class="container">
             <h2>Organize sua vida com simplicidade</h2>
             <p>Gerencie tarefas, projetos e sua rotina com eficiência.</p>
             <a href="" class="btn">Começar agora</a>
-                </section>
         </div>
+    </section>
 
     <section class="features">
+         <h2>Benefícios</h2>
         <div class="container">
-            <h2>Benefícios</h2>
 
             <div class="features-grid">
                 <h3>Fácil de usar</h3>
                 <p>Interface somples e intuitiva.</p>
             </div>
-            <div>
+            <div class="features-grid">
                 <h3>Rápido</h3>
                 <p>Alta performance em qulquer dispositivo.</p>
             </div>
-            <div>
-                <h3>Sgeuro</h3>
+            <div class="features-grid">
+                <h3>Seguro</h3>
                 <p>Seus dados sempre protejoidos.</p>
             </div>
-    </section>
         </div>
+    </section>
 
     <section class="testimonials">
+
         <div class="container">
             <h2>O que dizem</h2>
 
-            <div class="">
+            <div class="testimonials-grid">
+
                 <blockquote>
                 <p>"Muito prático. Mudou a minha vida."</p>
+                <cite>-João</cite>
                 </blockquote>
 
-                </blockquote>
-                    <p>"Simples e eficiente."</p>
+                <blockquote>
+                 <p>"Simples e eficiente."</p>
                 <cite>-Maria</cite>
+                </blockquote>
             </div>
         </div>
     </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Comece hoje mesmo</h2>
+            <a href="" class="btn">Criar conta</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+
+        <div class="container-footer">
+            <p>© 2026 MeuApp</p>
+
+            <nav class="nav">
+                <a href="">Termos</a>
+                <a href="">Privacidade</a>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>
